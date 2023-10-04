@@ -9,10 +9,127 @@
 /*
   Note: This body rule set is to get you started
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul, li{
+  margin: 0 1rem;
+}
+
 body {
   background-color: rgb(137, 182, 154);
   font-family: "Helvetica", sans-serif;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav{
+  display: flex;
+  width: 100dvw;
+  justify-content: space-between;
+  align-items: center;
+  background-color: purple;
+  color: white;
+  position: sticky;
+  top: 0;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1.5rem;
+}
+
+nav h1, nav a
+{
+  margin: 1rem;
+}
+
+nav > a
+{
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 50ms ease-in-out;
+}
+
+nav > a:hover{
+  background-color: brown;
+}
+
+section, article
+{
+  margin: 20px 0;
+}
+
+section:last-child{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: min-content;
+  width: 100%;
+  gap: 30px;
+}
+
+section:last-child div:first-child{
+  grid-column: 1/3;
+}
+
+section:last-child div:nth-of-type(1) ~ div
+{
+  text-align: center;
+}
+
+section:last-child div:nth-of-type(1) ~ div img
+{
+  object-fit: cover;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+aside
+{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: min-content;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 20%;
+  padding: 10px;
+  box-shadow: -2px -1px 5px black;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+aside nav {
+  width: min-content;
+  background-color: white;
+  color: black;
+  text-align: right;
+  background-color: pink;
+  border-radius: 10px;
+}
+
+aside nav ul{
+  list-style: none;
+  margin: 0;
+}
+
+article li
+{
+  margin: 1rem 0;
+}
+
+article p{
+  max-width: 75%;
 }
